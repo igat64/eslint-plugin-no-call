@@ -1,13 +1,13 @@
 {
-  "name": "eslint-plugin-ipln-ngsd",
-  "version": "0.0.0",
+  "name": "eslint-plugin-no-call",
+  "version": "1.0.0",
   "description": "TODO: add leter",
   "keywords": [
     "eslint",
     "eslintplugin",
-    "eslint-plugin"
+    "eslint-plugin",
+    "eslint-plugin-no-call"
   ],
-  "author": "igor.atroshkin@gmail.com",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
@@ -22,5 +22,19 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igat-gh/eslint-plugin-no-call.git"
+  },
+  "author": "Igor Atroshkin <igor.atroshkin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igat-gh/eslint-plugin-no-call/issues"
+  },
+  "homepage": "https://github.com/igat-gh/eslint-plugin-no-call#readme",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib",
+    "test": "tests"
+  }
 }
