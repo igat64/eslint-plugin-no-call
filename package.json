@@ -20,7 +20,7 @@
     "mocha": "5.1.2"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.12.2"
   },
   "repository": {
     "type": "git",
