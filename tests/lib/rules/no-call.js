@@ -54,7 +54,7 @@ ruleTester.run("no-call", rule, {
       code: "(function fn() {})()",
       options: [["fn"]]
     },
-    "(() => {})()",
+    // "(() => {})()",
     "(function () {})()",
     //----------------------------------------------------------------------
     // Valid Methods Calls
