@@ -1,6 +1,6 @@
 /**
  * @fileoverview TODO: add leter
- * @author igor
+ * @author Igor Atroshkin <igor.atroshkin@gmail.com>
  */
 "use strict";
 
@@ -54,7 +54,7 @@ ruleTester.run("no-call", rule, {
       code: "(function fn() {})()",
       options: [["fn"]]
     },
-    // "(() => {})()",
+    "(() => {})()",
     "(function () {})()",
     //----------------------------------------------------------------------
     // Valid Methods Calls
