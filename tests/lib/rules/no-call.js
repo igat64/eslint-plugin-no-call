@@ -1,5 +1,5 @@
 /**
- * @fileoverview TODO: add leter
+ * @fileoverview Tests for the rule "no-call"
  * @author Igor Atroshkin <igor.atroshkin@gmail.com>
  */
 "use strict";
@@ -65,6 +65,11 @@ ruleTester.run("no-call", rule, {
     //----------------------------------------------------------------------
     // Valid Methods Calls
     //----------------------------------------------------------------------
+    "Object.assign({}, { a: 1 })",
+    {
+      code: "({}).set()",
+      options: [["({}).set()"]]
+    },
     {
       code: "_.set.call(_)",
       options: []
