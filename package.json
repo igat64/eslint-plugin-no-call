@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-no-call",
   "version": "1.0.0",
-  "description": "TODO: add leter",
+  "description": "Eslint plugin that provides the rule that restricts of use particular functions and/or methods to call.",
   "keywords": [
     "eslint",
     "eslintplugin",

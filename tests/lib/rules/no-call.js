@@ -7,14 +7,12 @@
 //------------------------------------------------------------------------------
 // Requirements
 //------------------------------------------------------------------------------
-
 const rule = require("../../../lib/rules/no-call");
 const RuleTester = require("eslint").RuleTester;
 
 //------------------------------------------------------------------------------
 // Helpers
 //------------------------------------------------------------------------------
-
 function funcError(functionName) {
   return {
     ruleId: "no-call",
@@ -27,16 +25,15 @@ function methodError(methodNameWithCalleObj) {
     message: `The call of method \`${methodNameWithCalleObj}\` is restricted by configuration.`
   };
 }
+
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
-
 RuleTester.setDefaultConfig({
   parserOptions: {
     ecmaVersion: 6
   }
 });
-
 const ruleTester = new RuleTester();
 ruleTester.run("no-call", rule, {
   valid: [
@@ -102,9 +99,9 @@ ruleTester.run("no-call", rule, {
       errors: [methodError("_.set")]
     },
     {
-      code: "some.deep.set({}, 'k', 'v')",
-      options: [["some.deep.set"]],
-      errors: [methodError("some.deep.set")]
+      code: "some.deep.deep.set({}, 'k', 'v')",
+      options: [["some.deep.deep.set"]],
+      errors: [methodError("some.deep.deep.set")]
     },
     {
       code: "_.set.call(_)",
