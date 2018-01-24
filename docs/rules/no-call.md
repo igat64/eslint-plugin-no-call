@@ -6,7 +6,7 @@ This rule was born in an attempt to forbid the use of the Lodash's `_.set` funct
 
 It tries to find all functions/methods calls in your code and check rule options to figure out is that call forbidden or not.
 
-> Note: Without options this rule actually useless it would not forbid any calls and do nothig.
+> Without options this rule actually useless, it would not forbid any calls and do nothig.
 
 Examples of **incorrect** code for this rule:
 
