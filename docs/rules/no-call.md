@@ -22,9 +22,11 @@ Examples of **incorrect** code for this rule:
 // For instance you want to forbit calls of `_.set`, `eval` and some `fn`
 _.set({}, "k", "v");
 eval("console.log('ping')");
-const fn = () => {}; fn();
+const fn = () => {};
+fn();
 // or
-function fn() {}; fn();
+function fn() {}
+fn();
 ```
 
 Examples of **correct** code for this rule:
@@ -39,11 +41,9 @@ Examples of **correct** code for this rule:
 
 ```js
 console.log.call(console, 42);
-new Function('console.log(6)')();
+new Function("console.log(6)")();
 Reflect.apply(console.log, null, [7]);
-setTimeout(console.log, 0, 15)
-
-(function fn() {})();
+setTimeout(console.log, 0, 15)(function fn() {})();
 
 new F();
 ```

@@ -1,13 +1,9 @@
 {
   "name": "eslint-plugin-no-call",
   "version": "1.0.0",
-  "description": "Eslint plugin with a rule that forbid the use of particular functions and/or methods to call.",
-  "keywords": [
-    "eslint",
-    "eslintplugin",
-    "eslint-plugin",
-    "eslint-plugin-no-call"
-  ],
+  "description":
+    "Eslint plugin with a rule that forbid the use of particular functions and/or methods to call.",
+  "keywords": ["eslint", "eslintplugin", "eslint-plugin", "eslint-plugin-no-call"],
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
