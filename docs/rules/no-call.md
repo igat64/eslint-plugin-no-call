@@ -1,12 +1,12 @@
-# Restrict the use of particular functions and/or methods to call
+# Forbid the use of particular functions and/or methods to call
 
-This rule was born in an attempt to restrict the use of the Lodash's `_.set` function, which mutates the passed object. But you can use it for your own reasons.
+This rule was born in an attempt to forbid the use of the Lodash's `_.set` function, which mutates the passed object. But you can use it for your own reasons.
 
 ## Rule Details
 
 It tries to find all functions/methods calls in your code and check rule options to figure out is that call forbidden or not.
 
-> Note: Without options this rule actually useless it would not restrict any calls and do nothig.
+> Note: Without options this rule actually useless it would not forbid any calls and do nothig.
 
 Examples of **incorrect** code for this rule:
 
@@ -50,7 +50,7 @@ new F();
 
 ## When Not To Use It
 
-Probably not the best choice to use this rule, when assumed, that in some part of the application a function/method call, you want to restrict, may have a different name or call is not explicit like in examples above. But it still up to your needs.
+Probably not the best choice to use this rule, when assumed, that in some part of the application a function/method call, you want to forbid, may have a different name or call is not explicit like in examples above. But it still up to your needs.
 Also, do not use this rule without options.
 
 ## Further Reading

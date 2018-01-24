@@ -16,7 +16,7 @@ const RuleTester = require("eslint").RuleTester;
 function error(callee) {
   return {
     ruleId: "no-call",
-    message: `A call of the \`${callee}\` is restricted by configuration.`
+    message: `The call of \`${callee}\` is not allowed.`
   };
 }
 
