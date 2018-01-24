@@ -96,6 +96,11 @@ ruleTester.run("no-call", rule, {
       options: [["setIn", "set", "setInterval"]],
       errors: [error("setIn"), error("setInterval")]
     },
+    {
+      code: "const fn = () => {}; fn();",
+      options: [["fn"]],
+      errors: [error("fn")]
+    },
     //----------------------------------------------------------------------
     // Invalid Methods Calls
     //----------------------------------------------------------------------

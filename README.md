@@ -1,6 +1,6 @@
 # eslint-plugin-no-call
 
-Eslint plugin with a rule that restricts of use particular functions and/or methods to call.
+Eslint plugin with a rule that restricts the use of particular functions and/or methods to call.
 
 ## Installation
 
@@ -33,11 +33,11 @@ Then configure the rule.
 ```json
 {
   "rules": {
-    "no-call/no-call": [1, ["_.set", "setInterval"]]
+    "no-call/no-call": [1, ["_.set"]]
   }
 }
 ```
 
 ## Supported Rules
 
-See the `docs` directory.
+* [no-call](https://github.com/igat-gh/eslint-plugin-no-call/blob/master/docs/rules/no-call.md)
