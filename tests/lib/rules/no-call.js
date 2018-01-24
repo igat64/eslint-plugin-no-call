@@ -13,16 +13,10 @@ const RuleTester = require("eslint").RuleTester;
 //------------------------------------------------------------------------------
 // Helpers
 //------------------------------------------------------------------------------
-function funcError(functionName) {
+function error(callee) {
   return {
     ruleId: "no-call",
-    message: `The call of function \`${functionName}\` is restricted by configuration.`
-  };
-}
-function methodError(methodNameWithCalleObj) {
-  return {
-    ruleId: "no-call",
-    message: `The call of method \`${methodNameWithCalleObj}\` is restricted by configuration.`
+    message: `A call of the \`${callee}\` is restricted by configuration.`
   };
 }
 
@@ -100,7 +94,7 @@ ruleTester.run("no-call", rule, {
     {
       code: "setIn(); setInterval();",
       options: [["setIn", "set", "setInterval"]],
-      errors: [funcError("setIn"), funcError("setInterval")]
+      errors: [error("setIn"), error("setInterval")]
     },
     //----------------------------------------------------------------------
     // Invalid Methods Calls
@@ -108,17 +102,17 @@ ruleTester.run("no-call", rule, {
     {
       code: "_.set({}, 'k', 'v')",
       options: [["_.set"]],
-      errors: [methodError("_.set")]
+      errors: [error("_.set")]
     },
     {
       code: "some.deep.deep.set({}, 'k', 'v')",
       options: [["some.deep.deep.set"]],
-      errors: [methodError("some.deep.deep.set")]
+      errors: [error("some.deep.deep.set")]
     },
     {
       code: "_.set.call(_)",
       options: [["_.set.call"]],
-      errors: [methodError("_.set.call")]
+      errors: [error("_.set.call")]
     }
   ]
 });
