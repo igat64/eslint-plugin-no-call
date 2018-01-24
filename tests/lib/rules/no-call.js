@@ -118,6 +118,21 @@ ruleTester.run("no-call", rule, {
       code: "_.set.call(_)",
       options: [["_.set.call"]],
       errors: [error("_.set.call")]
+    },
+    {
+      code: "Object['assign']();",
+      options: [["Object.assign"]],
+      errors: [error("Object.assign")]
+    },
+    {
+      code: "Object.assign['assign']();",
+      options: [["Object.assign.assign"]],
+      errors: [error("Object.assign.assign")]
+    },
+    {
+      code: "Object.assign['assign'].call();",
+      options: [["Object.assign.assign.call"]],
+      errors: [error("Object.assign.assign.call")]
     }
   ]
 });

@@ -13,20 +13,28 @@ Examples of **incorrect** code for this rule:
 ```js
 {
   "rules": {
-    "no-call/no-call": [1, ["_.set", "eval", "fn"]]
+    "no-call/no-call": [1, ["_.set", "eval", "fn", "obj.chain.call"]]
   }
 }
 ```
 
 ```js
-// For instance you want to forbit calls of `_.set`, `eval` and some `fn`
+// For instance you want to forbit calls of `_.set`, `eval` and etc.
+// `_.set`
 _.set({}, "k", "v");
+_["set"]({}, "k", "v");
+// `eval`
 eval("console.log('ping')");
+// `fn`
 const fn = () => {};
 fn();
 // or
-function fn() {}
+function fn() {};
 fn();
+// `obj.chain.chain.call`
+obj.chain.call();
+obj["chian"].call();
+obj["chian"]["call"]();
 ```
 
 Examples of **correct** code for this rule:
