@@ -41,28 +41,44 @@ ruleTester.run("no-call", rule, {
     // Valid Functions Calls
     //----------------------------------------------------------------------
     "call()",
+    "(() => {})()",
+    "(function () {})()",
     {
-      code: "anyFunctionCall()",
-      options: [["obj.anyFunctionCall"]]
+      code: "(function fn() {})()",
+      options: [["fn"]]
     },
     {
       code: "anyFunctionCall()",
-      options: [[]]
+      options: [["obj.anyFunctionCall"]]
     },
     {
       code: "new F()",
       options: [["F", "new F"]]
     },
     {
-      code: "(function fn() {})()",
-      options: [["fn"]]
+      code: "setTimeout(console.log, 0, 15)",
+      options: [["console.log"]]
     },
-    "(() => {})()",
-    "(function () {})()",
+    {
+      code: "anyFunctionCall()",
+      options: [[]]
+    },
     //----------------------------------------------------------------------
     // Valid Methods Calls
     //----------------------------------------------------------------------
     "Object.assign({}, { a: 1 })",
+    {
+      code: "new Function('console.log(6)')()",
+      options: [["console.log"]]
+    },
+    {
+      code: "Reflect.apply(console.log, null, [7])",
+      options: [["console.log"]]
+    },
+    {
+      code: "const set = _.set; set();",
+      options: [["_.set"]]
+    },
     {
       code: "({}).set()",
       options: [["({}).set()"]]
@@ -74,10 +90,6 @@ ruleTester.run("no-call", rule, {
     {
       code: "_.set.call(_)",
       options: [["set.call"]]
-    },
-    {
-      code: "const set = _.set; set();",
-      options: [["_.set"]]
     }
   ],
 
@@ -86,9 +98,9 @@ ruleTester.run("no-call", rule, {
     // Invalid Functions Calls
     //----------------------------------------------------------------------
     {
-      code: "setIn()",
-      options: [["setIn", "set"]],
-      errors: [funcError("setIn")]
+      code: "setIn(); setInterval();",
+      options: [["setIn", "set", "setInterval"]],
+      errors: [funcError("setIn"), funcError("setInterval")]
     },
     //----------------------------------------------------------------------
     // Invalid Methods Calls
