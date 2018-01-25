@@ -14,7 +14,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "requireindex": "1.1.0"
+    "requireindex": "1.1.1"
   },
   "devDependencies": {
     "eslint": "4.16.0",

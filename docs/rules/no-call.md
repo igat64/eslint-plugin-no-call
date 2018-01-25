@@ -31,7 +31,7 @@ fn();
 // or
 function fn() {};
 fn();
-// `obj.chain.chain.call`
+// `obj.chain.call`
 obj.chain.call();
 obj["chian"].call();
 obj["chian"]["call"]();
