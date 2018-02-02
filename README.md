@@ -40,4 +40,4 @@ Then configure the rule.
 
 ## Supported Rules
 
-* [no-call](https://github.com/igat-gh/eslint-plugin-no-call/blob/master/docs/rules/no-call.md) (docs are there)
+* [no-call](https://github.com/igat64/eslint-plugin-no-call/blob/master/docs/rules/no-call.md) (docs are there)

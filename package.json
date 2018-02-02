@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-call",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Eslint plugin with a rule that forbid the use of particular functions and/or methods to call.",
   "keywords": [
     "eslint",
@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/igat-gh/eslint-plugin-no-call.git"
+    "url": "git+https://github.com/igat64/eslint-plugin-no-call.git"
   },
   "author": "Igor Atroshkin <igor.atroshkin@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/igat-gh/eslint-plugin-no-call/issues"
+    "url": "https://github.com/igat64/eslint-plugin-no-call/issues"
   },
-  "homepage": "https://github.com/igat-gh/eslint-plugin-no-call#readme",
+  "homepage": "https://github.com/igat64/eslint-plugin-no-call#readme",
   "directories": {
     "doc": "docs",
     "lib": "lib",
