@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-no-call",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Eslint plugin with a rule that forbid the use of particular functions and/or methods to call.",
   "keywords": [
     "eslint",
